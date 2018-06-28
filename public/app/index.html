@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+<head>
+	<!-- Common Meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+	<!-- Site Title -->
+	<title id="s_title">Application Development</title>
+
+    <!-- Build files of concatenated vendor script and css files -->
+	<script src="app/assets/build/vendorscript.min.js"></script>
+	<link href="app/assets/build/vendorstyle.min.css" rel="stylesheet" type="text/css" />
+
+
+	 <!-- Build files of concatenated  custom script and css files -->
+
+	<link href="app/assets/less/homeStyle.css" rel="stylesheet" type="text/css" />
+	<link href="app/assets/less/style.css" rel="stylesheet" type="text/css" />
+	<link href="app/assets/less/orders.css" rel="stylesheet" type="text/css" />
+
+
+
+
+	<script src="app/module.js"></script>
+	<script src="app/router.js"></script>
+	<script src="app/directive.js"></script>
+	<script src="app/MainController.js"></script>
+	<script src="app/components/orders/empatica.ordersController.js"></script>
+	<script src="app/MainService.js"></script>
+	<script src="app/components/orders/empatica.ordersService.js"></script>
+
+
+
+
+
+</head>
+
+<body ng-controller="MainController" class=" ">
+	
+	  <div ng-view> </div>
+	<div >
+		  
+	</div>
+
+
+</body>
+</html>

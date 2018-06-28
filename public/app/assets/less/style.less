@@ -1,0 +1,159 @@
+
+@bodyBackgroundColor:#e7e5e3;
+@empaticaHeaderColor:#bc204b;
+@empaticaFontColor:white;
+@containerBackgroundColor:white;
+@containerMaxWidth: 1280px;
+@largeScreenWidth:1200px;
+@mediumScreenWidth:992px;
+@smallScreenWidth:768px;
+@left:left;
+@center:center;
+@right:right;
+@top:top;
+@bottom:bottom;
+
+
+.bodysetting{
+	background-color: @bodyBackgroundColor;
+    height: 100%;
+    width: 100%;
+	padding:0px;
+}
+
+body{
+	
+  .bodysetting;
+}
+
+.container{
+	
+	background:@containerBackgroundColor;
+	max-width: @containerMaxWidth;
+}
+
+@media (min-width: @containerMaxWidth){
+	
+	.container{
+		width:1170px;
+	}
+}
+
+
+@media (min-width: @mediumScreenWidth){
+.container {
+   	 width: 970px;
+	}	
+}
+
+
+@media (min-width: @smallScreenWidth){
+	
+	.container {
+    width: 750px;
+	}
+}
+
+.empaticaColor{
+	color:@empaticaHeaderColor;
+}
+
+.align{
+
+	 padding-top: 30px;
+    text-align: @center;
+}
+
+
+.floatLeft {
+	float: @left;
+}
+
+.floatRight{
+	float:@right;
+}
+
+.marginLeft {
+	margin-left: 25%;
+}
+
+
+.h2{
+	
+	.title{
+		font-size: 2.25rem;
+	}
+
+	.sub_title {
+	font-size: 1.25rem;
+	color: black;
+	padding-top: 2px;
+	text-align: center;
+	}
+
+}
+
+.setBorderRadius{
+	border-radius: 8px;
+}
+
+.curve{
+	border-radius: 18px;
+}
+
+.empaticadesignSet{
+	color:@empaticaFontColor;
+	background-color: @empaticaHeaderColor;
+}
+
+.setbottomstyle {
+	margin-top: 95px;
+	background-color: #4a4a4a;
+	height: 165px;
+	margin-bottom: 10px;
+	border-radius:0px !important;
+	padding-bottom: 10%;
+}
+
+.form .col-lg-3{
+	text-align:@right;
+	clear: both;
+}
+
+.empaticalegalstyle{
+    	font-size: .75rem;
+	    color: #fefefe;
+
+}
+
+.textColor {
+	color:@empaticaFontColor;
+}
+
+.setinputwidth{
+	    width: 50%;
+}
+
+
+.setBoxshadow{
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 4px;
+}
+
+.loginwidth{
+	margin-left: 48%;
+}
+.orderstyle{
+	margin-left: 40%;
+}
+
+
+.topnav{
+	
+	 background-color: @empaticaHeaderColor;
+     overflow: hidden;
+
+     .topnav-right {
+  		float: right;
+	}
+}
+

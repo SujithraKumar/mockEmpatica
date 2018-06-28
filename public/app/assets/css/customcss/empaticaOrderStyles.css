@@ -1,0 +1,95 @@
+body{
+background-color: #e7e5e3;
+}
+
+.setwidth {
+	max-width: 319px;
+}
+.cardlistbackground{
+	color: white;
+	background-color:black;
+}
+
+.overlaysetting{
+	margin-top: -20px !important;
+    margin-right: -15px !important;
+}
+
+.orderBackground{
+ background-color: gray;
+
+}
+
+.pic_area {
+	background: #000;
+	
+}
+
+.pic-area {
+	background-color: gray;
+	
+}	
+
+
+
+.txt_area {
+	max-height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.setmaxwidth{
+	    max-width: 280px;
+}
+
+.col-lg-10 .code{
+    padding-left: 200px;
+    /* padding-right: 50px; */
+    margin-left: 100px;
+}
+
+.col-lg-2 .apply{
+
+	    margin-left: 100px;
+}
+
+.padright {
+	padding-right: 23px !important;
+}
+
+.height {
+	min-height: 200px;
+}
+
+.icon {
+	font-size: 47px;
+	color: #5CB85C;
+}
+
+.iconbig {
+	font-size: 77px;
+	color: #5CB85C;
+}
+
+.table > tbody > tr > .emptyrow {
+	border-top: none;
+}
+
+.table > thead > tr > .emptyrow {
+	border-bottom: none;
+}
+
+.table > tbody > tr > .highrow {
+	border-top: 3px solid;
+}
+
+.setbackgeround{
+	background-color: white;
+	color: black;
+}
+
+
+.cursorNotallow {
+	cursor: not-allowed !important;
+}
+

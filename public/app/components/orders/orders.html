@@ -1,0 +1,197 @@
+﻿
+<div class="container " ng-controller="OrdersController">
+	
+	<div class="row ">
+		<div class="col-lg-12 col-md-12 col-sm-12 empaticadesignSet">
+			
+			<navbar></navbar>
+			
+		</div>
+		<div ng-if="UpdateSuccess" class="alert alert-success alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>Successfully updated the details!</strong> 
+	</div>
+
+	<div class="row   mb-5 pb-5">
+			<div ng-if="items.length>0" class="card-group">
+				
+				<div class="card setwidth mx-5 mt-5" ng-repeat="item in items">
+					<div class="pic-area">
+						<img src="app/assets/embrace-blue.png" class="card-img-top" alt="Watch" />
+
+						<div class="card-block">
+							<h5 class="card-title">{{item.name}}</h5>
+
+						</div>
+					</div>
+					
+					<ul class="list-group ">
+						<li class="list-group-item cardlistbackground">Order ID : {{item.orderid}} </li>
+						<li class="list-group-item cardlistbackground">Amount : ${{item.amount}} </li>
+						<li class="list-group-item cardlistbackground">Status : {{item.paidStatus}}</li>
+						<li class="list-group-item cardlistbackground" ng-if="item.trackingCode">Tracking Code : {{item.trackingCode}}</li>
+						<li class="list-group-item cardlistbackground" ng-if="!item.trackingCode">Tracking Code : No Tracking Details Available</li>
+						<li class="list-group-item cardlistbackground">Shipping Address: {{item.place}}</li>
+
+
+					</ul>
+					<div class="card-img-overlay text-right pt-4 pl-4 mr-0 overlaysetting">
+						<button type="button" class="btn btn-secondary btn-sm setbackgeround " ng-if="!item.isCancelled" data-toggle="modal" data-target=".bd-example-modal-lg" ng-click="editDetails(item)">&#x270E;</button>
+						<button type="button" class="btn btn-danger btn-sm cursorNotallow " ng-if="item.isCancelled">&#x270E;</button>
+						<button type="button" id="orderCancellation" ng-if="!item.isCancelled" class="btn btn-secondary btn-sm setbackgeround" ng-click="CancelItemConfirmation(item)"><span aria-hidden="true">&times;</span></button>
+						<button type="button" id="orderCancellation" ng-if="item.isCancelled" class="btn btn-danger btn-sm cursorNotallow"><span aria-hidden="true">C</span></button>
+
+					</div>
+				</div>
+			</div>
+			<div class="ml-5 mt-5 pl-5">
+				<h1  class="text-center ml-5 pl-5" ng-if="items.length == 0">No Data</h1>
+			</div>
+	</div>
+	</div>
+	<div class="row ">
+		<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+			<div class="card ">
+				<div class="card-header">
+					<h3 class="text-xs-center"><strong>Order summary</strong></h3>
+				</div>
+				<div class="card-block">
+					<div class="table-responsive">
+						<table class="table table-sm">
+							<thead>
+								<tr>
+									<td><strong>Item Name</strong></td>
+									<td class="text-xs-center"><strong>Item Price</strong></td>
+									<td class="text-xs-center"><strong>Item Quantity</strong></td>
+									<td class="text-xs-right"><strong>Total</strong></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!item.isCancelled" ng-repeat="item in items">
+									<td>Order {{item.orderid}}--{{item.name}}</td>
+									<td class="text-xs-center">${{item.amount}}</td>
+									<td class="text-xs-center">1</td>
+									<td class="text-xs-right">${{item.amount}}</td>
+								</tr>
+
+								<tr>
+									<td class="highrow"></td>
+									<td class="highrow"></td>
+									<td class="highrow text-xs-center"><strong>Subtotal</strong></td>
+									<td class="highrow text-xs-right">${{subtotal}}</td>
+								</tr>
+								<tr>
+									<td class="emptyrow"></td>
+									<td class="emptyrow"></td>
+									<td class="emptyrow text-xs-center"><strong>Shipping</strong></td>
+									<td class="emptyrow text-xs-right">${{shippingPrice}}</td>
+								</tr>
+								<tr>
+									<td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+									<td class="emptyrow"></td>
+									<td class="emptyrow text-xs-center"><strong>Total</strong></td>
+									<td class="emptyrow text-xs-right">${{subtotal+shippingPrice}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade bd-example-modal-lg " id="viewModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg ">
+			<div class="modal-content">
+				<div class="row">
+					<div class="pic_area col-xl-6 col-lg-5 col-md-6 col-sm-6 col-xs-12 ">
+						<img src="app/assets/embrace-blue.png" class="card-img-top" alt="Watch" />
+					</div>
+					<div class=" col-xl-6 col-lg-7 col-md-6  col-sm-6 col-xs-12">
+						<div class="row pt-3 ml-2 pr-3">
+							<div class=""><b> Embrace Watch - Stretchable Band Black</b></div>
+							<button type="button" class="close modal-close pl-3 ml-3" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div>
+
+							<div class="input-group mt-3 pr-4">
+								<span class="input-group-text" id="Amount">$</span>
+								<input type="text" class="form-control setmaxwidth" aria-label="check" aria-describedby="Amount" ng-value="selectedItem.amount" ng-model="selectedItem.amount" readonly />
+								<span class="input-group-text" id="Amount">$</span>
+								<div class="input-group-append">
+								</div>
+							</div>
+							<div class="input-group mt-3 pr-4">
+								<span class="input-group-text" id="status">&#x1F4E7</span>
+								<input type="text" class="form-control setmaxwidth" aria-label="check" aria-describedby="status" ng-value="selectedItem.mail" ng-model="selectedItem.mail" />
+								<span class="input-group-text" id="Amount">&#x1F4E7</span>
+								<div class="input-group-append">
+								</div>
+							</div>
+
+							<div class="input-group mt-3 pr-4">
+								<span class="input-group-text" id="discount">&#x260E;</span>
+								<input type="text" class="form-control setmaxwidth" aria-label="check" aria-describedby="discount" ng-value="selectedItem.contact" ng-model="selectedItem.contact" />
+								<span class="input-group-text" id="Amount">	&#x260E;</span>
+								<div class="input-group-append">
+								</div>
+							</div>
+
+							<div class="input-group mt-3 pr-4">
+								<span class="input-group-text" id="status">&#x1F4CC;</span>
+								<input type="text" class="form-control setmaxwidth" aria-label="check" aria-describedby="status" ng-value="selectedItem.place" ng-model="selectedItem.place" />
+								<span class="input-group-text" id="status">	&#x1F4CC;</span>
+
+								<div class="input-group-append">
+								</div>
+							</div>
+
+							<div class="row m-5 text-center">
+								<button type="button" class="btn btn-outline-success mr-5" data-dismiss="modal" ng-click="updateOrderDetails(selectedItem)">Update</button>
+								<button type="button" class="btn btn-outline-danger mr-3" data-dismiss="modal" ng-click="cancelOrder()"> cancel</button>
+
+							</div>
+
+
+
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="modal" id="confirmationModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Item Cancellation</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Are your sure to cancel the item?</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" ng-click="cancelOrder()">Yes</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+

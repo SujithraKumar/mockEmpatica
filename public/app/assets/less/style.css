@@ -1,0 +1,105 @@
+.bodysetting {
+  background-color: #e7e5e3;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+body {
+  background-color: #e7e5e3;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+.container {
+  background: #ffffff;
+  max-width: 1280px;
+}
+@media (min-width: 1280px)
+  .container {
+    width: 1170px;
+  }
+
+@media (min-width: 992px)
+  .container {
+    width: 970px;
+  }
+
+@media (min-width: 768px) 
+  .container {
+    width: 750px;
+  }
+
+.empaticaColor {
+  color: #bc204b;
+}
+.align {
+  padding-top: 30px;
+  text-align: center;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.marginLeft {
+  margin-left: 25%;
+}
+
+h2.title {
+  font-size: 2.25rem;
+}
+h2.sub_title {
+  font-size: 1.25rem;
+  color: black;
+  padding-top: 2px;
+  text-align: center;
+}
+.setBorderRadius {
+  border-radius: 8px;
+}
+.curve {
+  border-radius: 18px;
+}
+.empaticadesignSet {
+  color: #ffffff;
+  background-color: #bc204b;
+}
+.setbottomstyle {
+  margin-top: 95px;
+  background-color: #4a4a4a;
+  height: 165px;
+  margin-bottom: 10px;
+  border-radius: 0px !important;
+  padding-bottom: 10%;
+}
+.form .col-lg-3 {
+  text-align: right;
+  clear: both;
+}
+.empaticalegalstyle {
+  font-size: .75rem;
+  color: #fefefe;
+}
+.textColor {
+  color: #ffffff;
+}
+.setinputwidth {
+  width: 50%;
+}
+.setBoxshadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 4px;
+}
+.loginwidth {
+  margin-left: 48%;
+}
+.orderstyle {
+  margin-left: 40%;
+}
+.topnav {
+  background-color: #bc204b;
+  overflow: hidden;
+}
+.topnav .topnav-right {
+  float: right;
+}

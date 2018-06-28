@@ -1,0 +1,166 @@
+body{
+	background-color: #e7e5e3;
+    height: 100%;
+    width: 100%;
+	padding:0px;
+
+   
+}
+
+.container{
+	
+	background:white;
+	max-width: 1280px;
+	
+	
+}
+
+.padleft {
+	padding-left: 8px !important;
+}
+
+.empaticaBorder{
+
+	background:white;
+	margin-left: 125px;
+	margin-right: 125px;
+}
+
+
+
+@media (min-width: 1200px)
+.container {
+    width: 1170px;
+
+}
+
+@media (min-width: 992px)
+.container {
+   	 width: 970px;
+}
+
+@media (min-width: 768px)
+.container {
+    width: 750px;
+}
+
+
+
+.empaticacolor{
+	color:#bc204b;
+}
+	
+.align{
+
+	 padding-top: 30px;
+    text-align: center;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight{
+	float:right;
+}
+
+
+h2.title {
+	font-size: 2.25rem;
+}
+
+.marginLeft {
+	margin-left: 25%;
+}
+
+h2.sub_title {
+	font-size: 1.25rem;
+	color: black;
+	padding-top: 2px;
+	text-align: center;
+}
+
+
+.setBorderRadius{
+	border-radius: 8px;
+}
+
+.curve{
+	border-radius: 18px;
+}
+
+.empaticadesignSet{
+	color:white;
+	background-color: #bc204b;
+}
+
+.setbottomstyle {
+	margin-top: 95px;
+	background-color: #4a4a4a;
+	height: 165px;
+	margin-bottom: 10px;
+	border-radius:0px !important;
+	padding-bottom: 10%;
+}
+
+.form .col-lg-3{
+	text-align:right;
+	clear: both;
+
+
+}
+
+.empaticalegalstyle{
+    	font-size: .75rem;
+	    color: #fefefe;
+
+}
+
+.setMargin{
+	margin-top: -25px;
+}
+
+.textColor {
+	color:white;
+}
+.setinputwidth{
+	    width: 50%;
+}
+
+.setBoxshadow{
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 4px;
+}
+
+.loginwidth{
+	margin-left: 48%;
+}
+.orderstyle{
+	margin-left: 40%;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #bc204b;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+
+
