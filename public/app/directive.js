@@ -6,7 +6,6 @@
 			scope: false,
 			templateUrl: 'app/views/navbar.html',
 			link: function ($scope, element, attrs, toaster) {
-				debugger;
 			}
 		};
 	});
