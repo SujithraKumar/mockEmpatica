@@ -16,6 +16,18 @@ module.exports = function(grunt) {
                 ],
                 dest: 'public/app/assets/build/vendorscript.js',
             },
+            customjs: {
+                src: [
+                    'public/app/module.js',
+                    'public/app/router.js',
+                    'public/app/directive.js',
+                    'public/app/MainController.js',
+                    'public/app/app/MainService.js',
+                    
+
+                ],
+                dest: 'public/app/customjavascript.js',
+            },
             css:{
             	 src: [
                     'public/app/assets/css/*.css', // All JS in the libs folder
@@ -28,6 +40,13 @@ module.exports = function(grunt) {
                 files:[{
                     src:'public/app/assets/build/vendorscript.js',
                     dest:'public/app/assets/build/vendorscript.min.js'
+
+                }]
+            },
+            buildcustom:{
+                files:[{
+                    src:'public/app/customjavascript.js',
+                    dest:'public/app/customjavascript.min.js'
 
                 }]
             }
@@ -55,9 +74,11 @@ module.exports = function(grunt) {
 
    
     grunt.registerTask('concat-vendorjs', ['concat:js']);
+    grunt.registerTask('concat-customjs', ['concat:customjs']);
     grunt.registerTask('concat-vendorcss', ['concat:css']);
-    grunt.registerTask('concat-vendorminjs', ['uglify:build']);
-    grunt.registerTask('concat-vendormincss', ['cssmin:build']);
+    grunt.registerTask('uglify-vendorminjs', ['uglify:build']);
+    grunt.registerTask('uglify-customminjs', ['uglify:buildcustom']);
+    grunt.registerTask('cssmin-vendormincss', ['cssmin:build']);
 
 
 

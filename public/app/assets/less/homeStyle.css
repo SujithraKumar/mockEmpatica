@@ -6,7 +6,11 @@ body {
 .a {
     text-decoration: none;
 }
+.bdy-ctr{
+    background-color:white !important;
+}
 .bdy-ctr.pg-view {
+
     padding-bottom: 50px;
     padding-top: 50px;
 }
@@ -119,23 +123,23 @@ body {
 
 @font-face {
     font-family: 'Apex';
-    src: url('app/assets/fonts/Apex.ttf');
+    src: url('fonts/Apex.ttf');
 }
 
 @font-face {
     font-family: 'Lato-Regular';
-    src: url('app/assets/fonts/Lato-Regular.ttf');
+    src: url('fonts/Lato-Regular.ttf');
 }
 
 @media only screen and (max-width: 144px) {
   .hdr {
-    background-image: url('app/assets/homepageimages/homepage_hero-lg-ldpi.jpg');
+    background-image: url('homepage_hero-lg-ldpi.jpg');
   }
 }
 
 @media only screen and (min-width: 144px) {
     .hdr {
-        background-image: url('app/assets/homepageimages/homepage_hero-lg-mdpi.jpg');
+        background-image: url('homepage_hero-lg-mdpi.jpg');
     }
     .pg-view {
         padding: 0px 50px; 
@@ -144,7 +148,7 @@ body {
 
 @media only screen and (min-width: 360px) {
     .hdr {
-        background-image: url('app/assets/homepageimages/homepage_hero-lg-hdpi.jpg');
+        background-image: url('homepage_hero-lg-hdpi.jpg');
     }
     .pg-view {
         padding: 0px 100px; 
@@ -182,7 +186,7 @@ body {
 
 @media only screen and (min-width: 720px) {
   .hdr {
-    background-image: url('app/assets/homepageimages/homepage_hero-lg-xhdpi.jpg');
+    background-image: url('homepage_hero-lg-xhdpi.jpg');
     }
     .pg-view {
         padding: 0px 100px; 
