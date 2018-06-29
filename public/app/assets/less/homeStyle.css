@@ -1,63 +1,190 @@
 
-
-main{
-	background-color: white !important;
+body {
+    margin: 0px;
+    font-family: Lato-Regular;
 }
-
-.banner_text {
-    position: absolute !important;
-    color: white;
-    text-align: left;
-    padding: 10em;
-    bottom: 2rem;
+.a {
+    text-decoration: none;
 }
-
-.btn_white{
-    color: white;
+.bdy-ctr.pg-view {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.bdy-ctr .rght-ctr {
+    flex: 0;
+}
+.btn-hldr .btn {
+    background-color: transparent;
     border: 1px solid;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    border-radius: 3px;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    padding: 5px 30px;
 }
-
-.light_color{
-    color: #5a5858;
+.btn-styl-1 {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.5s ease;
 }
-
-.sub_text{
-    font-size: 20px;
-    color: black;
-    font-weight: 400;
-    letter-spacing: 1px;
+.btn-styl-1:hover {
+    background-color: transparent;
+    background-color: #fff;
+    color: #000;
 }
-
-.rside{
-    padding: 0 8%;
-    color: grey;
+.btn-styl-2 {
+    background-color: transparent;
+    border: 1px solid #BC204B;
+    color: #BC204B;
+    transition: all 0.5s ease;
+}
+.btn-styl-2:hover {
+    background-color: transparent;
+    background-color: #BC204B;
+    color: #fff;
+}
+.flx {
+    display: flex;
+}
+.flx-1x {
+    flex-grow: 1;
+}
+.flx-2x {
+    flex-grow: 2;
+}
+.flx-b-ctr {
+    align-items: center;
+    justify-content: center;
+}
+.ftr {
+    background-color: #ccc;
+}
+.ftr-cr {
+    height: 45px;
+}
+.ftr-links {
+    border-bottom: 1px solid #999;
+    height: 45px;
+}
+.img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+.hdr {
+    align-items: flex-start;
+    background-position: right;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+}
+.left-ctr {
+    padding-right: 20px;
+}
+.mgn-b-20 {
+    margin-bottom: 20px !important;
+}
+.rght-ctr .img{
+    min-width: 150px;
+}
+.txt {
+    margin: 0px;
+}
+.txt-bld {
     font-weight: bold;
 }
-
-.lside{
-    padding: 8% 0;
-    color: grey;
-    font-weight: bold;
-}
-
-footer {
-    background: #f8f8f8;
-    color: #909090;
+.txt-ctr {
     text-align: center;
-    padding-top: 2%;
+}
+.txt-lg {
+    font-size: 42px;
+}
+.txt-med {
+    font-size: 18px;
+}
+.txt-sm {
+    font-size: 12px;
+    line-height: 1.5;
+}
+.txt-styl-1 {
+    color: #fff;
+}
+.txt-styl-2 {
+    color: #555;
 }
 
-.foot{
-    border-bottom: 1px solid;
-    margin-bottom: 2%;
+@font-face {
+    font-family: 'Apex';
+    src: url('app/assets/fonts/Apex.ttf');
 }
 
-.font-weight-bold.text-uppercase.text-lg.text-dark.mb-3 {
-    padding-right: 10%;
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('app/assets/fonts/Lato-Regular.ttf');
 }
 
-h6.font-weight-bold.text-uppercase.text-lg.text-dark.mb-3 {
-    padding-left: 10%;
+@media only screen and (max-width: 144px) {
+  .hdr {
+    background-image: url('app/assets/homepageimages/homepage_hero-lg-ldpi.jpg');
+  }
+}
+
+@media only screen and (min-width: 144px) {
+    .hdr {
+        background-image: url('app/assets/homepageimages/homepage_hero-lg-mdpi.jpg');
+    }
+    .pg-view {
+        padding: 0px 50px; 
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .hdr {
+        background-image: url('app/assets/homepageimages/homepage_hero-lg-hdpi.jpg');
+    }
+    .pg-view {
+        padding: 0px 100px; 
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .bdy-main-hldr {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .left-ctr {
+        flex-basis: 100%;
+    }
+    .left-ctr .txt {
+        text-align: center;
+    }
+    .rght-ctr {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .bdy-main-hldr {
+        flex-wrap: nowrap;
+    }
+    .left-ctr {
+        flex-basis: auto;
+    }
+    .rght-ctr {
+        flex-basis: auto;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+  .hdr {
+    background-image: url('app/assets/homepageimages/homepage_hero-lg-xhdpi.jpg');
+    }
+    .pg-view {
+        padding: 0px 100px; 
+    }
 }
